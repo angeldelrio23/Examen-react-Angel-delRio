@@ -47,15 +47,17 @@ class Api extends React.Component {
   }
 
   añadir() {
-    const tlfs = [];
-    tlfs.push(
-      this.state.imagen,
-      this.state.marca,
-      this.state.sistemaop,
-      this.state.dimension,
-      this.state.almacenamiento
-    );
-    localStorage.setItem('tlfs', tlfs);
+    this.tlfsFavoritos.push({
+      imagen: this.state.imagen,
+      marca: this.state.marca,
+      sistema: this.state.sistema,
+      dimension: this.state.dimension,
+      almacenamiento: this.state.almacenamiento,
+    });
+  }
+
+  componentWillUnmount() {
+    localStorage.setItem('tlfs', JSON.stringify(this.tlfsFavoritos));
   }
 
   async buscar() {

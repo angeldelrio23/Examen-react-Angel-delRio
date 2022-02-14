@@ -3,6 +3,7 @@ import Ejercicio1 from '../components/Ejercicio1';
 import Ejercicio2 from '../components/Ejercicio2';
 import Api from '../components/Api';
 import Ejercicio3 from '../components/Ejercicio3';
+import Ejercicio3Res from '../components/Ejercicio3Res';
 
 export const PaginasApp = [
   {
@@ -34,5 +35,11 @@ export const PaginasApp = [
     path: '/Api',
     title: 'Ejercicio 2 Api',
     component: Api,
+  },
+  {
+    id: 5,
+    path: '/Ejercicio3Res',
+    title: 'Ejercicio 3 Resuelto',
+    component: Ejercicio3Res,
   },
 ];
